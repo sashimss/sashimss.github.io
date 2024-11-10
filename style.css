@@ -60,23 +60,22 @@ header p {
     background-color: #1e1e1e;
     border-radius: 8px;
     padding: 0;
+    position: relative;
+    overflow: hidden; /* Ensures content doesn't overflow the card */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative; /* Allows positioning of the backdrop */
-    overflow: hidden; /* Ensures no overflow */
 }
 
-.project-card img {
+/* Project Image as Background */
+.project-image {
     width: 100%;
     height: 200px;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1; /* Ensures the image stays in the background */
+    background-size: cover;
+    background-position: center;
 }
 
-.project-card .backdrop {
+/* Backdrop for the Text */
+.backdrop {
     background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black backdrop */
     position: absolute;
     top: 0;
@@ -85,10 +84,10 @@ header p {
     bottom: 0;
     z-index: 1;
     padding: 20px;
-    border-radius: 8px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    border-radius: 8px;
 }
 
 .project-card h3 {
