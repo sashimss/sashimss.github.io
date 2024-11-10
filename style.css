@@ -56,6 +56,7 @@ header p {
     margin-top: 20px;
 }
 
+/* Project Card */
 .project-card {
     background-color: #1e1e1e;
     border-radius: 8px;
@@ -78,16 +79,15 @@ header p {
 .backdrop {
     background-color: #1e1e1e; /* Solid background color */
     position: absolute;
-    top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 0; /* Position at the bottom */
     z-index: 1;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    border-radius: 8px;
+    border-radius: 0 0 8px 8px; /* Rounded corners at the bottom */
 }
 
 /* Adjust the project card styles to ensure text is readable */
