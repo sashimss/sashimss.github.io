@@ -11,16 +11,61 @@ body {
     color: #e0e0e0;
     font-family: 'Poppins', sans-serif;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center horizontally */
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    min-height: 100vh;
+    padding-top: 50px;
+}
+
+.sidebar ul {
+    list-style: none;
+    width: 100%;
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: #ff5722;
+    font-size: 1.2em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+
+.sidebar ul li a:hover {
+    color: #ffffff;
+    background-color: #333333;
+    border-radius: 8px;
 }
 
 /* Container */
 .container {
-    text-align: center;
-    max-width: 1200px;
+    margin-left: 220px; /* Offset for the sidebar */
+    max-width: 900px;
     padding: 20px;
+    text-align: center;
 }
 
 /* Header */
@@ -56,60 +101,53 @@ header p {
     margin-top: 20px;
 }
 
-/* Project Card */
 .project-card {
     background-color: #1e1e1e;
     border-radius: 8px;
-    padding: 0;
     position: relative;
-    overflow: hidden; /* Ensures content doesn't overflow the card */
+    overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 400px;
 }
 
 /* Project Image as Background */
 .project-image {
-    width: 100%;
-    height: 200px;
+    height: 300px;
     background-size: cover;
     background-position: center;
 }
 
 /* Backdrop for the Text */
 .backdrop {
-    background-color: #1e1e1e; /* Solid background color */
+    background-color: rgba(0, 0, 0, 0.6);
     position: absolute;
+    bottom: 0;
     left: 0;
     right: 0;
-    bottom: 0; /* Position at the bottom */
-    z-index: 1;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    border-radius: 0 0 8px 8px; /* Rounded corners at the bottom */
+    border-radius: 0 0 8px 8px;
 }
 
-/* Adjust the project card styles to ensure text is readable */
 .project-card h3 {
     font-size: 1.3em;
     margin-bottom: 10px;
     color: #ff5722;
-    z-index: 2; /* Ensure it's above the backdrop */
 }
 
 .project-card p {
     font-size: 1em;
     margin-bottom: 15px;
     color: #e0e0e0;
-    z-index: 2; /* Ensure it's above the backdrop */
 }
 
 .project-card a {
     color: #ff5722;
     text-decoration: none;
     font-weight: bold;
-    z-index: 2; /* Ensure it's above the backdrop */
 }
 
 .project-card a:hover {
@@ -133,25 +171,15 @@ footer p {
     color: #b3b3b3;
 }
 
-footer a {
+/* Contact Icons */
+.contact-icons a {
     color: #ff5722;
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: #ffffff;
-}
-
-.social-media {
-    margin-top: 10px;
-}
-
-.social-media a {
+    font-size: 2em;
     margin: 0 10px;
-    color: #ff5722;
+    transition: color 0.3s;
     text-decoration: none;
 }
 
-.social-media a:hover {
+.contact-icons a:hover {
     color: #ffffff;
 }
