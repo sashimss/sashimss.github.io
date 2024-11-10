@@ -76,7 +76,7 @@ header p {
 
 /* Backdrop for the Text */
 .backdrop {
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black backdrop */
+    background-color: #1e1e1e; /* Solid background color */
     position: absolute;
     top: 0;
     left: 0;
@@ -90,25 +90,26 @@ header p {
     border-radius: 8px;
 }
 
+/* Adjust the project card styles to ensure text is readable */
 .project-card h3 {
     font-size: 1.3em;
     margin-bottom: 10px;
     color: #ff5722;
-    z-index: 2;
+    z-index: 2; /* Ensure it's above the backdrop */
 }
 
 .project-card p {
     font-size: 1em;
     margin-bottom: 15px;
     color: #e0e0e0;
-    z-index: 2;
+    z-index: 2; /* Ensure it's above the backdrop */
 }
 
 .project-card a {
     color: #ff5722;
     text-decoration: none;
     font-weight: bold;
-    z-index: 2;
+    z-index: 2; /* Ensure it's above the backdrop */
 }
 
 .project-card a:hover {
