@@ -19,7 +19,7 @@ body {
 /* Container */
 .container {
     text-align: center;
-    max-width: 1000px;
+    max-width: 1200px; /* Increased width */
     padding: 20px;
 }
 
@@ -51,7 +51,7 @@ header p {
 
 .project-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Increased min-width for cards */
     gap: 20px;
     margin-top: 20px;
 }
