@@ -140,3 +140,17 @@ footer a {
 footer a:hover {
     color: #ffffff;
 }
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    color: #ff5722;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #ffffff;
+}
