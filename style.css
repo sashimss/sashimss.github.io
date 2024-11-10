@@ -63,6 +63,7 @@ header p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: left;
+    height: 100%; /* Allow the card to grow in height */
 }
 
 .project-card img {
