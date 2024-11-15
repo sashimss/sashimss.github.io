@@ -16,7 +16,6 @@ body {
 
 /* Container */
 .container {
-    margin-left: 220px; /* Offset for the sidebar */
     max-width: 900px;
     padding: 20px;
     text-align: center;
