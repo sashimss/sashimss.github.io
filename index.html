@@ -10,15 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Sidebar Navigation -->
-    <nav class="sidebar">
-        <ul>
-            <li><a href="#about"><i class="fas fa-user"></i><span>About Me</span></a></li>
-            <li><a href="#projects"><i class="fas fa-briefcase"></i><span>Projects</span></a></li>
-            <li><a href="#contact"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
-        </ul>
-    </nav>
-
     <!-- Main Content -->
     <div class="container">
         <!-- Header -->
@@ -29,12 +20,47 @@
 
         <!-- About Section -->
         <section class="about">
-            <p>Hello! I am a passionate game developer, specializing in creating immersive and fun experiences. My journey in game development has allowed me to work on a variety of exciting projects. Below, you will find some of my work.</p>
+            <div class="about-container">
+                <div class="about-text">
+                    <p>Hello! I am a passionate game developer from India. I thrive to create fun and immersive gaming experience for the people.</p>
+                </div>
+                <div class="contact-details">
+                    <p>Contact me:</p>
+                    <div class="contact-icons">
+                        <a href="mailto:sashimsuryawanshi@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/sashimsuryawanshi" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/sashimss" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="about-divider">
+
+        <!-- Tab Buttons -->
+        <div class="tab-buttons">
+            <button id="work-experience-btn" class="tab-button active">Work Experience</button>
+            <button id="projects-btn" class="tab-button">Projects</button>
+        </div>
+
+        <!-- Work Experience Section -->
+        <section id="work-experience" class="content-section">
+            <div class="experience-list">
+                <div class="experience-item">
+                    <h3>Unity Developer Intern at The Sunday Games</h3>
+                    <p><strong>Duration:</strong> Nov 2023 - Present</p>
+                    <p>Working on fun and mind-boggling puzzle games for android.</p>
+                </div>
+                <div class="experience-item">
+                    <h3>Game Developer at Glitch Club IITH</h3>
+                    <p><strong>Duration:</strong> Jun 2021 - Dec 2021</p>
+                    <p>Worked with a team of game development enthusiasts of IITH to build 2D/3D games.</p>
+                </div>
+            </div>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="projects">
-            <h2>My Projects</h2>
+        <section id="projects" class="content-section hidden">
             <div class="project-cards">
                 <!-- Project 1 -->
                 <div class="project-card">
@@ -54,26 +80,11 @@
                         <a href="#">View Project</a>
                     </div>
                 </div>
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-image" style="background-image: url('https://via.placeholder.com/400x300');"></div>
-                    <div class="backdrop">
-                        <h3>Project Three</h3>
-                        <p>A multiplayer game focused on team strategy and coordination.</p>
-                        <a href="#">View Project</a>
-                    </div>
-                </div>
             </div>
         </section>
 
-        <!-- Footer / Contact Section -->
-        <footer id="contact">
-            <p>Contact me:</p>
-            <div class="contact-icons">
-                <a href="mailto:sashimsuryawanshi@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/sashimsuryawanshi" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </footer>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

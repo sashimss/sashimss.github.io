@@ -11,53 +11,7 @@ body {
     color: #e0e0e0;
     font-family: 'Poppins', sans-serif;
     display: flex;
-    justify-content: center; /* Center horizontally */
-}
-
-/* Sidebar */
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 100%;
-    background-color: #1e1e1e;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 50px;
-}
-
-.sidebar ul {
-    list-style: none;
-    width: 100%;
-    padding-left: 0;
-}
-
-.sidebar ul li {
-    width: 100%;
-    margin: 20px 0;
-}
-
-.sidebar ul li a {
-    color: #ff5722;
-    font-size: 1.2em;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    transition: color 0.3s, background-color 0.3s;
-}
-
-.sidebar ul li a i {
-    margin-right: 10px;
-    font-size: 1.5em;
-}
-
-.sidebar ul li a:hover {
-    color: #ffffff;
-    background-color: #333333;
-    border-radius: 8px;
+    justify-content: center;
 }
 
 /* Container */
@@ -86,6 +40,74 @@ header p {
     font-size: 1em;
     line-height: 1.5;
 }
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; /* Space between the text and contacts */
+}
+
+.about-text {
+    flex: 2; /* Take more space for text */
+    text-align: left; /* Align text to the left */
+}
+
+.contact-details {
+    flex: 1; /* Take less space for contacts */
+    text-align: right; /* Align contacts to the right */
+}
+
+.contact-icons a {
+    margin: 0 5px;
+    color: #ff5722;
+    font-size: 1.5em;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+
+.contact-icons a:hover {
+    color: #ffffff;
+}
+
+/* Tab Buttons */
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.tab-button {
+    background-color: #1e1e1e;
+    color: #ff5722;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 8px;
+    margin: 0 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tab-button:hover, .tab-button.active {
+    background-color: #ff5722;
+    color: #ffffff;
+}
+
+/* Hidden Content */
+.hidden {
+    display: none;
+}
+
+/* Horizontal Line Styling */
+.about-divider {
+    border: none;
+    height: 1px;
+    background-color: #333333; /* Subtle color for the line */
+    margin: 20px 0;
+    opacity: 0.6; /* Slight transparency for a softer look */
+}
+
 
 /* Projects Section */
 .projects h2 {
@@ -160,6 +182,47 @@ header p {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
+/* Work Experience Section */
+.work-experience {
+    margin: 40px 0;
+}
+
+.work-experience h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #ff5722;
+}
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.experience-item {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.experience-item h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.experience-item p {
+    font-size: 1em;
+    color: #b3b3b3;
+}
+
+.experience-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+
 /* Footer */
 footer {
     margin-top: 30px;
@@ -183,3 +246,46 @@ footer p {
 .contact-icons a:hover {
     color: #ffffff;
 }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Center content and remove margin offset */
+    .container {
+        margin: 0 auto;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    /* Adjust the project card layout */
+    .project-cards {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-text, .contact-details {
+        text-align: center;
+    }
+
+    .experience-list {
+        gap: 10px;
+    }
+}
+
